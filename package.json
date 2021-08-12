@@ -1,0 +1,22 @@
+{
+  "name": "sc4k8s",
+  "version": "1.0.0",
+  "description": "Download sc4k8s to your system.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwkriewallLW/sc4k8s.git"
+  },
+  "author": "Lightwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwkriewallLW/sc4k8s/issues"
+  },
+  "homepage": "https://github.com/jwkriewallLW/sc4k8s#readme"
+}
