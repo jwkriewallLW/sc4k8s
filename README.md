@@ -1,4 +1,3 @@
-cd# sc4k8s
 Downloads Splunk Connect for Kubernetes onto your machine.
 
 Run the command ./helm.sh to:
@@ -8,5 +7,5 @@ Creates the values.yaml file where you will upload HEC token, host, port, indexN
 
 **Modify yaml with your information before running ./sc4k8s 
 
-Run the command ./sc4k8s to:
-Install Splunk Connect for Kubernetes with the updated yaml file
+Run the command ./sc4k8s_install to:
+Install Splunk Connect for Kubernetes with the updated values.yaml file
