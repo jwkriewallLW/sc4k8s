@@ -1,39 +1,19 @@
 	echo ""
 	echo "[1] Install Helm and Splunk Chart"
-	echo "[2] Install Splunk Connect for Kubernetes"
-	echo "[3] Exit"
+	echo "[2] Exit"
+	echo "[3] Install Splunk Connect for Kubernetes"
 	echo ""
 	read option
+	if [ $option -eq 3 ];
+		then [ $skip -eq 1 ]
+		fi
 	if [ $option -eq 2 ];
-		then echo "--------------------------------------"
-		echo "Would you like to install Splunk Connect?"
-		echo "Make sure to update your values.yaml file with host, IP Address, port, HEC token, index name and cluster name."
-		echo "Check documentation if you need help."
-		echo ""
-		echo "[1] Yes, install Splunk Connect for Kubernetes"
-		echo "[2] No, exit installation"
-		echo ""
-		read sc4k8s
-			if [ $sc4k8s -eq 1 ];
-				then helm install my-splunk-connect -f values.yaml splunk/splunk-connect-for-kubernetes
-				echo ""
-				echo "------------------------------------------"
-				echo "| Splunk Connect Successfully Installed! |"
-				echo "------------------------------------------"
-				echo ""
-				exit 0
-
-			elif [ $sc4k8s -eq 2 ];
-				then echo "Splunk Connect for Kubernetes installation has not been completed."
-				echo ""
-				exit 0
-			fi
-	elif [ $option -eq 3 ];
 		then echo "Exiting installation"
-		echo ""
 		exit 0
 	elif [ $option -eq 1 ];
-		then echo "Please have the following pieces of information available: "
+		then 
+
+		echo "Please have the following pieces of information available: "
         	echo "host, IP Address, port, token, index name, & cluster name"
 		echo ""
 
@@ -83,16 +63,16 @@
 					then echo "Splunk Connect for Kubernetes installation has not been completed."
 					exit 0
                         	elif [ $yn -eq 1 ];
-                        		then helm install my-splunk-connect -f values.yaml splunk/splunk-connect-for-kubernetes
-                                	echo ""
-					echo "------------------------------------------"
-                                	echo "| Splunk Connect Successfully Installed! |"
-					echo "------------------------------------------"
+                        		then
+                                	helm install my-splunk-connect -f values.yaml splunk/splunk-connect-for-kubernetes
+                                	echo " "
+                                	echo "Splunk Connect Successfully Installed!"
                 		else
                         		echo "Please try again."
-					echo ""
                         		exit 0
-        	        fi
-		fi
+                fi
+
 	fi
+
 fi
+
