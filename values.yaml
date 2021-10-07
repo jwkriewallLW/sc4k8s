@@ -11,7 +11,7 @@ global:
   splunk:
     hec:
       # host is required and should be provided by user
-      host:
+      host: {
       # port to HEC, optional, default 8088
       port:
       # token is required and should be provided by user
